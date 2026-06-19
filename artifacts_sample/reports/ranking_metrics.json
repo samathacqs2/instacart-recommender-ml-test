@@ -1,0 +1,42 @@
+{
+  "sample_users": 5000,
+  "negative_sampling": {
+    "train_negatives_per_positive": 5,
+    "test_negatives_per_positive": 20,
+    "strategy": "same_department_products_never_bought_by_user"
+  },
+  "features": [
+    "user_product_frequency",
+    "user_product_reordered",
+    "product_global_popularity",
+    "department_id"
+  ],
+  "baseline": {
+    "ndcg_at_10": 0.5031041751533476,
+    "map_at_10": 0.3679661195515243,
+    "num_queries": 5000
+  },
+  "xgb_ranker": {
+    "ndcg_at_10": 0.9187133675832192,
+    "map_at_10": 0.8016026298500881,
+    "num_queries": 5000
+  },
+  "feature_importance": [
+    {
+      "feature": "user_product_reordered",
+      "importance": 0.5025421977043152
+    },
+    {
+      "feature": "user_product_frequency",
+      "importance": 0.48458120226860046
+    },
+    {
+      "feature": "product_global_popularity",
+      "importance": 0.011094234883785248
+    },
+    {
+      "feature": "department_id",
+      "importance": 0.0017824183451011777
+    }
+  ]
+}

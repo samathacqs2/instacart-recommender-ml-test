@@ -1,0 +1,9 @@
+{
+  "num_queries": 100,
+  "mean_ms": 20.387595179994378,
+  "p50_ms": 20.09600099995623,
+  "p95_ms": 22.60019175004686,
+  "max_ms": 24.77529600002981,
+  "requirement_ms": 2000,
+  "passes_requirement": true
+}

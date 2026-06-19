@@ -3,12 +3,11 @@ numpy
 scikit-learn
 xgboost
 joblib
-gensim
-sentence-transformers
-faiss-cpu
 streamlit
 pydantic
 python-dotenv
+faiss-cpu
+pyarrow
 matplotlib
 langchain
 langchain-openai

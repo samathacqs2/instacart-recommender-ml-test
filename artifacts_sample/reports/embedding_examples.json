@@ -1,0 +1,374 @@
+{
+  "similar_products_examples": {
+    "banana_24852": {
+      "query_product_id": 24852,
+      "query_product_name": "Banana",
+      "results": [
+        {
+          "product_id": 13176,
+          "product_name": "Bag of Organic Bananas",
+          "aisle": "fresh fruits",
+          "department": "produce",
+          "score": 0.6881982088088989
+        },
+        {
+          "product_id": 15754,
+          "product_name": "Dark Chocolate High Protein Bars",
+          "aisle": "protein meal replacements",
+          "department": "personal care",
+          "score": 0.6591774225234985
+        },
+        {
+          "product_id": 48892,
+          "product_name": "Hunger Filler Whole grain Bread",
+          "aisle": "bread",
+          "department": "bakery",
+          "score": 0.6538519263267517
+        },
+        {
+          "product_id": 42390,
+          "product_name": "Organic Apple Gala Bag",
+          "aisle": "packaged vegetables fruits",
+          "department": "produce",
+          "score": 0.6520384550094604
+        },
+        {
+          "product_id": 48327,
+          "product_name": "Organic Kale Caesar Salad Kit",
+          "aisle": "packaged vegetables fruits",
+          "department": "produce",
+          "score": 0.6501426696777344
+        },
+        {
+          "product_id": 24275,
+          "product_name": "Golean Vanilla Graham Clusters Cereal",
+          "aisle": "cereal",
+          "department": "breakfast",
+          "score": 0.6492533683776855
+        },
+        {
+          "product_id": 20029,
+          "product_name": "Apple Chardonnay Chicken Sausage",
+          "aisle": "hot dogs bacon sausage",
+          "department": "meat seafood",
+          "score": 0.6481451392173767
+        },
+        {
+          "product_id": 39365,
+          "product_name": "French Vanilla Syrup",
+          "aisle": "honeys syrups nectars",
+          "department": "pantry",
+          "score": 0.647208034992218
+        },
+        {
+          "product_id": 14883,
+          "product_name": "Organic Cream Top Vanilla Yogurt",
+          "aisle": "yogurt",
+          "department": "dairy eggs",
+          "score": 0.6467045545578003
+        },
+        {
+          "product_id": 19822,
+          "product_name": "Kosher Red Apple Havarti Shingles",
+          "aisle": "kosher foods",
+          "department": "international",
+          "score": 0.6465804576873779
+        }
+      ]
+    },
+    "organic_strawberries_21137": {
+      "query_product_id": 21137,
+      "query_product_name": "Organic Strawberries",
+      "results": [
+        {
+          "product_id": 3640,
+          "product_name": "Caesar Rules Dressing",
+          "aisle": "salad dressing toppings",
+          "department": "pantry",
+          "score": 0.7619569897651672
+        },
+        {
+          "product_id": 2578,
+          "product_name": "Whole Grain Pancakes",
+          "aisle": "frozen breakfast",
+          "department": "frozen",
+          "score": 0.759232223033905
+        },
+        {
+          "product_id": 21298,
+          "product_name": "Organic Cake Cones",
+          "aisle": "ice cream ice",
+          "department": "frozen",
+          "score": 0.7532902956008911
+        },
+        {
+          "product_id": 17118,
+          "product_name": "Natural Sugar Free Spearmint Mints",
+          "aisle": "mint gum",
+          "department": "snacks",
+          "score": 0.751467227935791
+        },
+        {
+          "product_id": 32436,
+          "product_name": "Original Granola",
+          "aisle": "granola",
+          "department": "breakfast",
+          "score": 0.7506614327430725
+        },
+        {
+          "product_id": 41162,
+          "product_name": "Grapes, Certified Organic, California, Black Seedless",
+          "aisle": "packaged vegetables fruits",
+          "department": "produce",
+          "score": 0.7503687739372253
+        },
+        {
+          "product_id": 10144,
+          "product_name": "Barrel Pickles",
+          "aisle": "pickled goods olives",
+          "department": "pantry",
+          "score": 0.7497408986091614
+        },
+        {
+          "product_id": 1668,
+          "product_name": "Coconut & Pear Lip Balm",
+          "aisle": "skin care",
+          "department": "personal care",
+          "score": 0.7497050166130066
+        },
+        {
+          "product_id": 26702,
+          "product_name": "Permanent Hair Color Brown-Black 2N",
+          "aisle": "hair care",
+          "department": "personal care",
+          "score": 0.7482411861419678
+        },
+        {
+          "product_id": 6578,
+          "product_name": "SPF 30 Sunscreen Lotion",
+          "aisle": "soap",
+          "department": "personal care",
+          "score": 0.7478564977645874
+        }
+      ]
+    }
+  },
+  "keyword_search_examples": {
+    "healthy breakfast": [
+      {
+        "product_id": 22337,
+        "product_name": "Great Grains",
+        "aisle": "cereal",
+        "department": "breakfast",
+        "score": 0.6647186279296875
+      },
+      {
+        "product_id": 25808,
+        "product_name": "English Breakfast",
+        "aisle": "tea",
+        "department": "beverages",
+        "score": 0.6377845406532288
+      },
+      {
+        "product_id": 4455,
+        "product_name": "Raspberry Cereal",
+        "aisle": "breakfast bars pastries",
+        "department": "breakfast",
+        "score": 0.6242432594299316
+      },
+      {
+        "product_id": 19553,
+        "product_name": "Raw Breakfast Crusts",
+        "aisle": "breakfast bars pastries",
+        "department": "breakfast",
+        "score": 0.6061301231384277
+      },
+      {
+        "product_id": 40451,
+        "product_name": "Breakfast Pack",
+        "aisle": "cereal",
+        "department": "breakfast",
+        "score": 0.6025480031967163
+      },
+      {
+        "product_id": 15477,
+        "product_name": "Wheaties",
+        "aisle": "cereal",
+        "department": "breakfast",
+        "score": 0.6007174253463745
+      },
+      {
+        "product_id": 8243,
+        "product_name": "Original Toastable Organic Breakfast",
+        "aisle": "frozen breakfast",
+        "department": "frozen",
+        "score": 0.5989054441452026
+      },
+      {
+        "product_id": 13042,
+        "product_name": "with Crispy Almonds Cereal",
+        "aisle": "cereal",
+        "department": "breakfast",
+        "score": 0.5936493873596191
+      },
+      {
+        "product_id": 42446,
+        "product_name": "Shredded Wheat",
+        "aisle": "cereal",
+        "department": "breakfast",
+        "score": 0.59295654296875
+      },
+      {
+        "product_id": 38601,
+        "product_name": "Breakfast Americana",
+        "aisle": "tea",
+        "department": "beverages",
+        "score": 0.5872520208358765
+      }
+    ],
+    "milk": [
+      {
+        "product_id": 16611,
+        "product_name": "Milk",
+        "aisle": "milk",
+        "department": "dairy eggs",
+        "score": 0.6797010898590088
+      },
+      {
+        "product_id": 36524,
+        "product_name": "Chocolate Drink",
+        "aisle": "milk",
+        "department": "dairy eggs",
+        "score": 0.6561802625656128
+      },
+      {
+        "product_id": 41488,
+        "product_name": "Chocolate Milk",
+        "aisle": "milk",
+        "department": "dairy eggs",
+        "score": 0.6432384252548218
+      },
+      {
+        "product_id": 2187,
+        "product_name": "Strawberry Milk",
+        "aisle": "milk",
+        "department": "dairy eggs",
+        "score": 0.6111513376235962
+      },
+      {
+        "product_id": 15254,
+        "product_name": "Milk of Magnesia",
+        "aisle": "digestion",
+        "department": "personal care",
+        "score": 0.6085960865020752
+      },
+      {
+        "product_id": 4210,
+        "product_name": "Whole Milk",
+        "aisle": "milk",
+        "department": "dairy eggs",
+        "score": 0.6078779101371765
+      },
+      {
+        "product_id": 34197,
+        "product_name": "Goat Milk",
+        "aisle": "milk",
+        "department": "dairy eggs",
+        "score": 0.6046479344367981
+      },
+      {
+        "product_id": 19348,
+        "product_name": "Fat Free Milk",
+        "aisle": "milk",
+        "department": "dairy eggs",
+        "score": 0.5967439413070679
+      },
+      {
+        "product_id": 4879,
+        "product_name": "Milk, Fat Free",
+        "aisle": "milk",
+        "department": "dairy eggs",
+        "score": 0.5932481288909912
+      },
+      {
+        "product_id": 45468,
+        "product_name": "Lowfat Chocolate Milk",
+        "aisle": "milk",
+        "department": "dairy eggs",
+        "score": 0.5924835205078125
+      }
+    ],
+    "coffee": [
+      {
+        "product_id": 48722,
+        "product_name": "Coffee",
+        "aisle": "coffee",
+        "department": "beverages",
+        "score": 0.772254467010498
+      },
+      {
+        "product_id": 18443,
+        "product_name": "Ground Coffee",
+        "aisle": "coffee",
+        "department": "beverages",
+        "score": 0.7200924158096313
+      },
+      {
+        "product_id": 32302,
+        "product_name": "Coffee, Ground, Good Morning",
+        "aisle": "coffee",
+        "department": "beverages",
+        "score": 0.7159059047698975
+      },
+      {
+        "product_id": 29467,
+        "product_name": "Original Coffee",
+        "aisle": "coffee",
+        "department": "beverages",
+        "score": 0.7142277359962463
+      },
+      {
+        "product_id": 1755,
+        "product_name": "Dark Morning Joe Ground Coffee",
+        "aisle": "coffee",
+        "department": "beverages",
+        "score": 0.711482048034668
+      },
+      {
+        "product_id": 23887,
+        "product_name": "Bagged Coffee",
+        "aisle": "coffee",
+        "department": "beverages",
+        "score": 0.704007089138031
+      },
+      {
+        "product_id": 14891,
+        "product_name": "Black Coffee",
+        "aisle": "coffee",
+        "department": "beverages",
+        "score": 0.6929643750190735
+      },
+      {
+        "product_id": 1891,
+        "product_name": "Instant Coffee",
+        "aisle": "coffee",
+        "department": "beverages",
+        "score": 0.6876808404922485
+      },
+      {
+        "product_id": 7126,
+        "product_name": "Original Ground Coffee",
+        "aisle": "coffee",
+        "department": "beverages",
+        "score": 0.6866699457168579
+      },
+      {
+        "product_id": 11838,
+        "product_name": "Breakfast Blend Coffee",
+        "aisle": "coffee",
+        "department": "beverages",
+        "score": 0.683154821395874
+      }
+    ]
+  }
+}

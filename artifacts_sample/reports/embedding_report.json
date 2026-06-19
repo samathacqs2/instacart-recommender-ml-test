@@ -1,0 +1,30 @@
+{
+  "item2vec": {
+    "method": "Word2Vec over product baskets",
+    "vector_size": 128,
+    "window": 20,
+    "min_count": 2,
+    "epochs": 5,
+    "max_baskets": 250000,
+    "num_baskets": 250000,
+    "num_products_with_embedding": 35414
+  },
+  "text_embeddings": {
+    "method": "SentenceTransformer over product_name + aisle + department",
+    "model_name": "all-MiniLM-L6-v2",
+    "embedding_shape": [
+      49688,
+      384
+    ],
+    "faiss_index": "IndexFlatIP over normalized embeddings"
+  },
+  "latency": {
+    "num_queries": 100,
+    "mean_ms": 20.387595179994378,
+    "p50_ms": 20.09600099995623,
+    "p95_ms": 22.60019175004686,
+    "max_ms": 24.77529600002981,
+    "requirement_ms": 2000,
+    "passes_requirement": true
+  }
+}

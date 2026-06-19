@@ -1,0 +1,31 @@
+{
+  "description": "Sample artifacts for Streamlit demo",
+  "created_from_notebooks": [
+    "01_prepare_data",
+    "02_train_ranker",
+    "03_train_embeddings"
+  ],
+  "ranking": {
+    "model": "ranking/xgb_ranker.joblib",
+    "metrics": "reports/ranking_metrics.json"
+  },
+  "embeddings": {
+    "faiss_index": "embeddings/text_products_demo.faiss",
+    "text_embeddings": "embeddings/text_embeddings_demo.npy",
+    "product_ids": "embeddings/text_product_ids_demo.npy",
+    "catalog": "embeddings/product_catalog_embeddings_demo.parquet",
+    "max_demo_products": 15000
+  },
+  "data": {
+    "user_history_sample": "data/user_history_sample.parquet",
+    "product_catalog": "data/product_catalog.parquet",
+    "product_popularity": "data/product_popularity.parquet",
+    "demo_users": 1000
+  },
+  "reports": {
+    "ranking_metrics": "reports/ranking_metrics.json",
+    "embedding_report": "reports/embedding_report.json",
+    "embedding_latency": "reports/embedding_latency.json",
+    "embedding_examples": "reports/embedding_examples.json"
+  }
+}
