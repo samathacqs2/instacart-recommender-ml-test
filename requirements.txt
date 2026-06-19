@@ -1,0 +1,14 @@
+pandas
+numpy
+scikit-learn
+xgboost
+joblib
+gensim
+sentence-transformers
+faiss-cpu
+streamlit
+pydantic
+python-dotenv
+matplotlib
+langchain
+langchain-openai
