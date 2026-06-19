@@ -1,35 +1,35 @@
 # Instacart Recommender ML Test
 
-Machine Learning pipeline for product recommendation using the Instacart dataset.
-The project includes a Learning to Rank model, product embeddings, and a small Streamlit demo.
+Pipeline de Machine Learning para recomendación de productos usando el dataset de Instacart.
+El proyecto incluye un modelo de Learning to Rank, embeddings de productos y una demo sencilla en Streamlit.
 
 ## Demo
 
 Streamlit app:
 
 ```text
-TODO: add Streamlit link here
+URL: https://instacart-recommender-ml-test-gdmih5estreamlit.app/
 ```
 
-Repository:
+Repositorio:
 
 ```text
-TODO: add GitHub repo link here
+URL: https://github.com/samathacqs2/instacart-recommender-m
 ```
 
-## Project summary
+## Resumen del proyecto
 
-This project was built using the Instacart Online Grocery Basket Analysis dataset. The main idea was to create a simple recommendation flow with three parts:
+Este proyecto fue desarrollado usando el dataset **Instacart Online Grocery Basket Analysis**. La idea principal fue construir un flujo simple de recomendación dividido en tres partes:
 
-1. A ranking model to recommend products for a user.
-2. Product embeddings to find similar products.
-3. A Streamlit app to test the recommendations in a small demo.
+1. Un modelo de ranking para recomendar productos a un usuario.
+2. Embeddings de productos para encontrar productos similares.
+3. Una app en Streamlit para probar las recomendaciones en una demo.
 
-The full training was done in Kaggle Notebooks. The repository includes the code, notebooks, and a reduced set of artifacts so the demo can run without the full dataset.
+El entrenamiento completo se realizó en Kaggle Notebooks. En este repositorio se incluye el código, los notebooks y una muestra reducida de artefactos para que la demo pueda ejecutarse sin cargar todo el dataset original.
 
 ## Dataset
 
-Main files used from the Instacart dataset:
+Archivos principales utilizados del dataset de Instacart:
 
 * `orders.csv`
 * `order_products__prior.csv`
@@ -38,9 +38,9 @@ Main files used from the Instacart dataset:
 * `aisles.csv`
 * `departments.csv`
 
-The original CSV files are not included in this repository because they are large. Only processed sample artifacts are included for the demo.
+Los archivos originales no se incluyen en el repositorio por su tamaño. Para la demo solo se incluyen artefactos procesados y reducidos.
 
-## Repository structure
+## Estructura del repositorio
 
 ```text
 app/
@@ -71,87 +71,87 @@ README.md
 
 ## Notebooks
 
-| Notebook                    | Purpose                                                                   |
+| Notebook                    | Descripción                                                               |
 | --------------------------- | ------------------------------------------------------------------------- |
-| `01-prepare-data.ipynb`     | Loads and prepares the Instacart data.                                    |
-| `02-train-ranker.ipynb`     | Builds the ranking dataset, trains the XGBRanker model, and evaluates it. |
-| `03-train-embeddings.ipynb` | Creates product embeddings and tests product similarity search.           |
-| `04-export-artifacts.ipynb` | Exports a smaller artifact package for the Streamlit demo.                |
+| `01-prepare-data.ipynb`     | Carga y prepara los datos de Instacart.                                   |
+| `02-train-ranker.ipynb`     | Construye el dataset de ranking, entrena el modelo XGBRanker y lo evalúa. |
+| `03-train-embeddings.ipynb` | Crea embeddings de productos y prueba búsqueda de productos similares.    |
+| `04-export-artifacts.ipynb` | Exporta una muestra reducida de artefactos para la demo en Streamlit.     |
 
 ## Learning to Rank
 
-For the ranking stage, I created user-product pairs and assigned labels:
+Para la etapa de ranking se crearon pares usuario-producto con las siguientes etiquetas:
 
-| Label | Meaning                               |
-| ----: | ------------------------------------- |
-|   `2` | Product was bought and reordered      |
-|   `1` | Product was bought for the first time |
-|   `0` | Negative sampled product              |
+| Label | Significado                       |
+| ----: | --------------------------------- |
+|   `2` | Producto comprado y reordenado    |
+|   `1` | Producto comprado por primera vez |
+|   `0` | Producto negativo muestreado      |
 
-The negative products were sampled from the same department as the positive product, excluding products the user had already bought.
+Los productos negativos se tomaron del mismo departamento que los productos positivos, excluyendo productos que el usuario ya había comprado.
 
-The model uses these features:
+Variables usadas por el modelo:
 
 * `user_product_frequency`
 * `user_product_reordered`
 * `product_global_popularity`
 * `department_id`
 
-The model used was `XGBRanker` with a ranking objective. The evaluation was done using `NDCG@10` and `MAP@10`. A popularity baseline was also included for comparison.
+El modelo utilizado fue `XGBRanker` con objetivo de ranking. La evaluación se realizó con `NDCG@10` y `MAP@10`, comparando también contra un baseline de popularidad.
 
-The metrics are saved in:
+Las métricas se guardan en:
 
 ```text
 artifacts_sample/reports/ranking_metrics.json
 ```
 
-## Product embeddings
+## Embeddings de productos
 
-For the embedding part, I created product vectors to support similarity search.
+Para la parte de embeddings se generaron vectores de productos con el objetivo de soportar búsqueda de productos similares.
 
-The notebook includes:
+El notebook incluye:
 
-* product co-occurrence embeddings,
-* text embeddings using product name, aisle, and department,
-* product similarity search,
-* keyword-based search,
-* latency check.
+* embeddings por co-ocurrencia de productos,
+* embeddings de texto usando nombre, aisle y department,
+* búsqueda de productos similares,
+* búsqueda por keyword,
+* medición básica de latencia.
 
-The demo uses a reduced FAISS index stored in:
+La demo usa un índice FAISS reducido almacenado en:
 
 ```text
 artifacts_sample/embeddings/
 ```
 
-## Streamlit app
+## App de Streamlit
 
-The Streamlit app has four sections:
+La app tiene cuatro secciones:
 
-* `Agente demo`: recommends products for a selected demo user.
-* `Historial de usuario`: shows the user's purchase history.
-* `Ejemplos embeddings`: shows product similarity and keyword search examples.
-* `Métricas`: shows ranking metrics and embedding latency.
+* `Agente demo`: recomienda productos para un usuario de la muestra.
+* `Historial de usuario`: muestra el historial de compras del usuario.
+* `Ejemplos embeddings`: muestra ejemplos de similitud y búsqueda por texto.
+* `Métricas`: muestra métricas del modelo y latencia de embeddings.
 
-Since the app is only a demo, it uses a sample of users. The available users are loaded from:
+Como es una demo, no todos los usuarios del dataset están disponibles. Los usuarios disponibles se cargan desde:
 
 ```text
 artifacts_sample/data/user_history_sample.parquet
 ```
 
-## How to run
+## Cómo ejecutar
 
-Install dependencies:
+Instalar dependencias:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the app:
+Ejecutar la app:
 
 ```bash
 streamlit run app/streamlit_app.py
 ```
 
-## Notes
+## Notas
 
-This is a technical test prototype, so the demo uses reduced artifacts instead of the full dataset. The full data preparation and model training were done in Kaggle, and the exported sample artifacts are included only to make the app easier to run and deploy.
+Este proyecto es un prototipo para una prueba técnica. Por eso, la demo usa artefactos reducidos en lugar del dataset completo. El procesamiento y entrenamiento principal se realizó en Kaggle, y los artefactos exportados se incluyen solo para facilitar la ejecución y despliegue de la app.
